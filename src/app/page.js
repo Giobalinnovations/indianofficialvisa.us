@@ -15,16 +15,11 @@ const Home = () => {
   const [isPartiallyFillFormOpen, setPartiallyFillFormOpen] = useState(false);
   const [isVisaStatusFormOpen, setVisaStatusFormOpen] = useState(false);
 
-  const handlePartiallyFillFormOpen = () => {
+  const handlePartiallyFillFormOpen = () =>
     setPartiallyFillFormOpen(prev => !prev);
-  };
-
-  const handlePaymentForCompletedFormOpen = () => {
+  const handlePaymentForCompletedFormOpen = () =>
     setPaymentForCompletedFormOpen(prev => !prev);
-  };
-  const handleVisaStatusFormOpen = () => {
-    setVisaStatusFormOpen(prev => !prev);
-  };
+  const handleVisaStatusFormOpen = () => setVisaStatusFormOpen(prev => !prev);
 
   useEffect(() => {
     localStorage.removeItem('formId');
@@ -32,32 +27,34 @@ const Home = () => {
 
   return (
     <>
-      <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-gray-50 to-gray-100">
-        {/* Background Decorations */}
-        <div className="absolute inset-0 bg-gradient-to-b from-orange/5 via-transparent to-primary/5 pointer-events-none"></div>
-        <div className="absolute inset-0 bg-[url('/assets/images/india/common/pattern.png')] bg-repeat opacity-5 pointer-events-none"></div>
+      <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-light to-white">
+        {/* Background Elements */}
+        <div className="absolute inset-0 bg-wave-pattern opacity-5 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-accent/5 pointer-events-none"></div>
 
-        {/* Main Content */}
         <Banner />
 
-        {/* Action Buttons Section */}
-        <div className="container relative w-full py-10 mx-auto">
-          <div className="grid grid-cols-1 gap-6 px-4 md:px-6 lg:px-8 md:grid-cols-2 lg:grid-cols-4 auto-rows-fr">
-            {/* Apply for India */}
-            <Link href="/visa/step-one" className="group h-full">
-              <div className="relative flex flex-col h-full p-6 transition-all duration-300 bg-white border border-transparent rounded-xl hover:border-orange/20 hover:shadow-2xl hover:shadow-orange/5 group-hover:scale-[1.02]">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-orange/10 via-primary/5 to-transparent rounded-bl-full -z-10"></div>
-                <div className="flex flex-col items-center justify-center flex-grow text-center space-y-3">
-                  <span className="text-lg font-semibold text-gray-800">
-                    Apply For INDIA
-                  </span>
-                  <span className="text-sm text-gray-500">
+        {/* Action Cards Section */}
+        <section className="container relative w-full py-16 mx-auto">
+          <div className="grid grid-cols-1 gap-8 px-4 md:px-6 lg:px-8 md:grid-cols-2 lg:grid-cols-4 animate-fadeIn">
+            {/* Apply for India Card */}
+            <Link href="/visa/step-one" className="group">
+              <div
+                className="relative h-full p-6 transition-all duration-300 bg-white border animate-fadeInUp rounded-xl hover:border-primary/20 hover:shadow-glow group-hover:scale-[1.02]"
+                style={{ '--delay': '0s' }}
+              >
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 via-tertiary/5 to-transparent rounded-bl-full -z-10"></div>
+                <div className="flex flex-col items-center justify-center space-y-4 text-center">
+                  <span className="text-xl font-semibold text-dark">
                     Start New Application
                   </span>
-                  <span className="inline-flex items-center justify-center w-10 h-10 text-white transition-transform duration-300 rounded-full bg-gradient-to-r from-orange to-primary group-hover:scale-110">
+                  <p className="text-sm text-gray-600">
+                    Begin your Indian e-Visa application process
+                  </p>
+                  <span className="inline-flex items-center justify-center w-12 h-12 text-white transition-transform duration-300 rounded-full bg-gradient-to-r from-primary to-tertiary group-hover:scale-110">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="w-5 h-5"
+                      className="w-6 h-6"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -74,24 +71,24 @@ const Home = () => {
               </div>
             </Link>
 
-            {/* Amend or Complete */}
-            <button
-              onClick={() => setPartiallyFillFormOpen(true)}
-              className="group h-full"
-            >
-              <div className="relative flex flex-col h-full p-6 transition-all duration-300 bg-white border border-transparent rounded-xl hover:border-pink/20 hover:shadow-2xl hover:shadow-pink/5 group-hover:scale-[1.02]">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-pink/10 via-primary/5 to-transparent rounded-bl-full -z-10"></div>
-                <div className="flex flex-col items-center justify-center flex-grow text-center space-y-3">
-                  <span className="text-lg font-semibold text-gray-800">
-                    Amend or Complete
+            {/* Complete Application Card */}
+            <button onClick={handlePartiallyFillFormOpen} className="group">
+              <div
+                className="relative h-full p-6 transition-all duration-300 bg-white border animate-fadeInUp rounded-xl hover:border-accent/20 hover:shadow-glow group-hover:scale-[1.02]"
+                style={{ '--delay': '0.2s' }}
+              >
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-accent/10 via-tertiary/5 to-transparent rounded-bl-full -z-10"></div>
+                <div className="flex flex-col items-center justify-center space-y-4 text-center">
+                  <span className="text-xl font-semibold text-dark">
+                    Resume Application
                   </span>
-                  <span className="text-sm text-gray-500">
-                    Partially Filled Form
-                  </span>
-                  <span className="inline-flex items-center justify-center w-10 h-10 text-white transition-transform duration-300 rounded-full bg-gradient-to-r from-pink to-primary group-hover:scale-110">
+                  <p className="text-sm text-gray-600">
+                    Continue your saved visa application
+                  </p>
+                  <span className="inline-flex items-center justify-center w-12 h-12 text-white transition-transform duration-300 rounded-full bg-gradient-to-r from-accent to-tertiary group-hover:scale-110">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="w-5 h-5"
+                      className="w-6 h-6"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -108,24 +105,27 @@ const Home = () => {
               </div>
             </button>
 
-            {/* Make Payment */}
+            {/* Payment Card */}
             <button
-              onClick={() => setPaymentForCompletedFormOpen(true)}
-              className="group h-full"
+              onClick={handlePaymentForCompletedFormOpen}
+              className="group"
             >
-              <div className="relative flex flex-col h-full p-6 transition-all duration-300 bg-white border border-transparent rounded-xl hover:border-success/20 hover:shadow-2xl hover:shadow-success/5 group-hover:scale-[1.02]">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-success/10 via-primary/5 to-transparent rounded-bl-full -z-10"></div>
-                <div className="flex flex-col items-center justify-center flex-grow text-center space-y-3">
-                  <span className="text-lg font-semibold text-gray-800">
-                    Make Payment
+              <div
+                className="relative h-full p-6 transition-all duration-300 bg-white border animate-fadeInUp rounded-xl hover:border-success/20 hover:shadow-glow group-hover:scale-[1.02]"
+                style={{ '--delay': '0.4s' }}
+              >
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-success/10 via-tertiary/5 to-transparent rounded-bl-full -z-10"></div>
+                <div className="flex flex-col items-center justify-center space-y-4 text-center">
+                  <span className="text-xl font-semibold text-dark">
+                    Process Payment
                   </span>
-                  <span className="text-sm text-gray-500">
-                    For Completed Form
-                  </span>
-                  <span className="inline-flex items-center justify-center w-10 h-10 text-white transition-transform duration-300 rounded-full bg-gradient-to-r from-success to-primary group-hover:scale-110">
+                  <p className="text-sm text-gray-600">
+                    Complete payment for your application
+                  </p>
+                  <span className="inline-flex items-center justify-center w-12 h-12 text-white transition-transform duration-300 rounded-full bg-gradient-to-r from-success to-tertiary group-hover:scale-110">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="w-5 h-5"
+                      className="w-6 h-6"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -142,24 +142,24 @@ const Home = () => {
               </div>
             </button>
 
-            {/* Visa Status */}
-            <button
-              onClick={() => setVisaStatusFormOpen(true)}
-              className="group h-full"
-            >
-              <div className="relative flex flex-col h-full p-6 transition-all duration-300 bg-white border border-transparent rounded-xl hover:border-brown/20 hover:shadow-2xl hover:shadow-brown/5 group-hover:scale-[1.02]">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-brown/10 via-primary/5 to-transparent rounded-bl-full -z-10"></div>
-                <div className="flex flex-col items-center justify-center flex-grow text-center space-y-3">
-                  <span className="text-lg font-semibold text-gray-800">
-                    Visa Status
+            {/* Track Status Card */}
+            <button onClick={handleVisaStatusFormOpen} className="group">
+              <div
+                className="relative h-full p-6 transition-all duration-300 bg-white border animate-fadeInUp rounded-xl hover:border-info/20 hover:shadow-glow group-hover:scale-[1.02]"
+                style={{ '--delay': '0.6s' }}
+              >
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-info/10 via-tertiary/5 to-transparent rounded-bl-full -z-10"></div>
+                <div className="flex flex-col items-center justify-center space-y-4 text-center">
+                  <span className="text-xl font-semibold text-dark">
+                    Track Application
                   </span>
-                  <span className="text-sm text-gray-500">
-                    Check Application Status
-                  </span>
-                  <span className="inline-flex items-center justify-center w-10 h-10 text-white transition-transform duration-300 rounded-full bg-gradient-to-r from-brown to-primary group-hover:scale-110">
+                  <p className="text-sm text-gray-600">
+                    Check your visa application status
+                  </p>
+                  <span className="inline-flex items-center justify-center w-12 h-12 text-white transition-transform duration-300 rounded-full bg-gradient-to-r from-info to-tertiary group-hover:scale-110">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="w-5 h-5"
+                      className="w-6 h-6"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -176,7 +176,7 @@ const Home = () => {
               </div>
             </button>
           </div>
-        </div>
+        </section>
 
         <ApplySection />
       </div>
