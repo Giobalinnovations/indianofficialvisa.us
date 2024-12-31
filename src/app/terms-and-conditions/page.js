@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Terms and Conditions',
-  description: 'Terms and Conditions',
+  title: 'Terms and Conditions - Indian Official Visa US',
+  description: 'Official terms and conditions for authorized visa services',
   alternates: {
     canonical: '/terms-and-conditions',
   },
@@ -9,101 +9,142 @@ export const metadata = {
 const page = () => {
   return (
     <div className="container px-4 pb-12 bg-white lg:pt-24 lg:py-10 lg:px-0 md:pt-28 md:pb-0 pt-28">
-      <div className="mx-auto ">
-        <h1 className="mb-3 text-4xl font-semibold lg:py-6">
-          Terms and Condition
+      <div className="mx-auto">
+        <h1 className="mb-6 text-4xl font-bold text-gray-900 lg:py-6">
+          Terms and Conditions
         </h1>
-        <p className="my-2 text-base font-medium leading-relaxed text-justify">
-          Welcome to India Travel Services! We&apos;re glad you&apos;re here. By
-          using our website, you agree to follow our User Agreement and Privacy
-          Policy. We may update our content without notice, so please check
-          periodically. Your continued use of the site means you accept any
-          changes.{' '}
+        <p className="my-4 text-lg leading-relaxed text-gray-700">
+          Welcome to Indian Official Visa US. These terms and conditions govern
+          the use of our authorized visa services. By accessing our platform,
+          you agree to comply with these official terms, which are established
+          in accordance with governmental regulations.
         </p>
       </div>
 
-      <div className="mx-auto  mt-7">
-        <h3 className="mt-2 text-lg font-bold">Responsible Use and Conduct</h3>
-        <p className="my-2 text-base font-medium leading-relaxed text-justify">
-          Please use our website and resources responsibly and in compliance
-          with applicable laws and guidelines. Specifically:
+      <div className="mx-auto mt-8">
+        <h2 className="text-2xl font-semibold text-gray-900">
+          Authorized Services
+        </h2>
+        <div className="mt-4 space-y-4">
+          <p className="text-gray-700 leading-relaxed">
+            Our official services include:
+          </p>
+          <ul className="list-disc pl-6 space-y-2 text-gray-700">
+            <li>Government-approved visa processing</li>
+            <li>Official document verification</li>
+            <li>Authorized application tracking</li>
+            <li>Government-mandated support</li>
+            <li>Regulated payment processing</li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="mx-auto mt-8">
+        <h2 className="text-2xl font-semibold text-gray-900">
+          Legal Obligations
+        </h2>
+        <div className="mt-4 space-y-4">
+          <p className="text-gray-700 leading-relaxed">
+            As an applicant, you are required to:
+          </p>
+          <ul className="list-disc pl-6 space-y-2 text-gray-700">
+            <li>Submit legally valid documentation</li>
+            <li>Provide authorized information</li>
+            <li>Follow official procedures</li>
+            <li>Meet regulatory requirements</li>
+            <li>Maintain accurate records</li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="mx-auto mt-8">
+        <h2 className="text-2xl font-semibold text-gray-900">
+          Official Fee Structure
+        </h2>
+        <p className="mt-4 text-gray-700 leading-relaxed">
+          Government-authorized fees include:
         </p>
-        <p className="my-2 text-base font-medium leading-relaxed text-justify">
-          Provide accurate information about yourself.{' '}
+        <ul className="mt-4 list-disc pl-6 space-y-2 text-gray-700">
+          <li>Regulated processing charges</li>
+          <li>Official verification fees</li>
+          <li>Authorized service costs</li>
+          <li>Government visa fees</li>
+          <li>Mandated handling charges</li>
+        </ul>
+      </div>
+
+      <div className="mx-auto mt-8">
+        <h2 className="text-2xl font-semibold text-gray-900">
+          Regulatory Compliance
+        </h2>
+        <p className="mt-4 text-gray-700 leading-relaxed">
+          Please note these official requirements:
         </p>
-        <p className="my-2 text-base font-medium leading-relaxed text-justify">
-          Keep your login information confidential.
+        <ul className="mt-4 list-disc pl-6 space-y-2 text-gray-700">
+          <li>Government authority decisions are final</li>
+          <li>Official processing timelines apply</li>
+          <li>Regulatory documentation required</li>
+          <li>Compliance with visa regulations</li>
+        </ul>
+      </div>
+
+      <div className="mx-auto mt-8">
+        <h2 className="text-2xl font-semibold text-gray-900">
+          Government Standards
+        </h2>
+        <p className="mt-4 text-gray-700 leading-relaxed">
+          We maintain compliance through:
         </p>
-        <p className="my-2 text-base font-medium leading-relaxed text-justify">
-          Don&apos;t access our resources through unauthorised means.
-        </p>
-        <p className="my-2 text-base font-medium leading-relaxed text-justify">
-          Don&apos;t disrupt or interfere with our resources.
-        </p>
-        <p className="my-2 text-base font-medium leading-relaxed text-justify">
-          You agree to indemnify us from any violation of this User Agreement.
+        <ul className="mt-4 list-disc pl-6 space-y-2 text-gray-700">
+          <li>Official service protocols</li>
+          <li>Government-approved processes</li>
+          <li>Regulatory compliance measures</li>
+          <li>Authorized quality controls</li>
+        </ul>
+      </div>
+
+      <div className="mx-auto mt-8">
+        <h2 className="text-2xl font-semibold text-gray-900">Legal Rights</h2>
+        <p className="mt-4 text-gray-700 leading-relaxed">
+          All content and materials on our official platform are protected under
+          government regulations and international law. Unauthorized use is
+          strictly prohibited and may result in legal action.
         </p>
       </div>
 
-      <div className="mx-auto  mt-7">
-        <h3 className="mt-2 text-lg font-bold">Privacy</h3>
-        <p className="my-2 text-base font-medium leading-relaxed text-justify">
-          Your privacy is important to us. Please refer to our privacy policy
-          for more information.
+      <div className="mx-auto mt-8">
+        <h2 className="text-2xl font-semibold text-gray-900">
+          Official Modifications
+        </h2>
+        <p className="mt-4 text-gray-700 leading-relaxed">
+          We reserve the right to modify these terms in accordance with
+          governmental regulations. Changes become effective upon official
+          posting to our authorized platform.
         </p>
       </div>
 
-      <div className="mx-auto  mt-7">
-        <h3 className="mt-2 text-lg font-bold">
-          Limitation of Warranties and Liability
-        </h3>
-        <p className="my-2 text-base font-medium leading-relaxed text-justify">
-          We provide resources &quot;as is&quot; and &quot;as available.&quot;
-          We&apos;re not responsible for any damage resulting from the use of
-          our resources. We limit our liability to the amount you paid for our
-          products/services.
+      <div className="mx-auto mt-8">
+        <h2 className="text-2xl font-semibold text-gray-900">
+          Legal Liability
+        </h2>
+        <p className="mt-4 text-gray-700 leading-relaxed">
+          Our official liability is limited to:
         </p>
+        <ul className="mt-4 list-disc pl-6 space-y-2 text-gray-700">
+          <li>Authorized service charges</li>
+          <li>Official processing errors</li>
+          <li>Documented compliance issues</li>
+          <li>Regulated service matters</li>
+        </ul>
       </div>
 
-      <div className="mx-auto  mt-7">
-        <h3 className="mt-2 text-lg font-bold">Copyrights and Trademarks</h3>
-        <p className="my-2 text-base font-medium leading-relaxed text-justify">
-          All content and materials on India Travel Services are protected by
-          copyright and trademark laws. Any unauthorised use is strictly
-          prohibited.
-        </p>
-      </div>
-
-      <div className="mx-auto  mt-7">
-        <h3 className="mt-2 text-lg font-bold">Governing Law</h3>
-        <p className="my-2 text-base font-medium leading-relaxed text-justify">
-          By accessing our website, you agree to follow our country&apos;s laws.
-          Any legal action related to this User Agreement will be brought to the
-          courts in the same city as India Travel Services Pvt Ltd&apos;s
-          corporate office.
-        </p>
-      </div>
-
-      <div className="mx-auto  mt-7">
-        <h3 className="mt-2 text-lg font-bold">Termination of Use</h3>
-        <p className="my-2 text-base font-medium leading-relaxed text-justify">
-          We may suspend or terminate your access to our website and resources,
-          with or without notice, for any reason.
-        </p>
-      </div>
-
-      <div className="mx-auto  mt-7">
-        <h3 className="mt-2 text-lg font-bold">Guarantee</h3>
-        <p className="my-2 text-base font-medium leading-relaxed text-justify">
-          We don&apos;t provide any warranties or guarantees of any kind.
-        </p>
-      </div>
-
-      <div className="mx-auto  mt-7">
-        <h3 className="mt-2 text-lg font-bold">Contact Information</h3>
-        <p className="my-2 text-base font-medium leading-relaxed text-justify">
-          If you have any questions or comments about our Terms of Service,
-          please contact us at info@traveltoindiaservices.com
+      <div className="mx-auto mt-8">
+        <h2 className="text-2xl font-semibold text-gray-900">
+          Official Contact
+        </h2>
+        <p className="mt-4 text-gray-700 leading-relaxed">
+          For inquiries about these terms or our authorized services, please
+          contact our official support team at support@indianofficialvisa.us
         </p>
       </div>
     </div>
